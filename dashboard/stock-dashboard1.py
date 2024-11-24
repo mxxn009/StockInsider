@@ -179,13 +179,11 @@ app.layout = html.Div(style=styles['body'], children=[
                     html.A("Favourites", href="http://127.0.0.1:3000/favourites.html", style=styles['navItem']),
                     html.Div(id='page-content'),
                 ]),
-                # html.A("Favourites", href="#", style=styles['navItem']),
                 dcc.Location(id="url", refresh=False),
                 html.Div([
                     html.A("Community", href="http://127.0.0.1:3000/community.html", style=styles['navItem']),
                     html.Div(id='page-content'),
                 ]),
-                # html.A("Community", href="/community", style=styles['navItem']),
                 html.A("Blog", href="#", style=styles['navItem']),
                 html.A("Support", href="#", style=styles['navItem']),
                 html.A("Settings", href="#", style=styles['navItem']),
@@ -258,12 +256,6 @@ app.layout = html.Div(style=styles['body'], children=[
     ]),
     dcc.Interval(id="update-interval", interval=60000, n_intervals=0),
 ])
-
-# Keep the existing callback functions unchanged
-# @app.callback(
-#     [Output("page-content", "children")],
-#     [Input("url", "pathname")],
-# )
 @app.callback(
     [Output("stock-details", "children"), Output("stock-graph", "figure")],
     [Input("search-button", "n_clicks"), Input("update-interval", "n_intervals")],
