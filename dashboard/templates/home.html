@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading-Inspired Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom right, #0e0f1a, #282c3f);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        /* Background Video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3; /* Adjust for video transparency */
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #bbb;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: white;
+        }
+        
+        /* Main Section */
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative; /* Position above video */
+            z-index: 1; /* Ensure content is above video */
+        }
+        
+        .main-heading {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .sub-heading {
+            font-size: 20px;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        
+        /* Search Bar */
+        .search-bar {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Market Cards */
+        .market-cards {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .market-card {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 100px;
+            color: #fff;
+        }
+        
+        .market-card .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .market-card .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .market-card .change {
+            color: #3bb273;
+        }
+        span{
+            color: #3bb273;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="/static/stockvid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Stock<span>Insider</span></div>
+        <nav>
+            <a href="#">Products</a>
+            <a href="#">Community</a>
+            <a href="#">Markets</a>
+            <a href="#">News</a>
+            <a href="#">More</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="main-heading">Look first. Then leap.</div>
+        <div class="sub-heading">The best trades require research, then commitment.</div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search markets here">
+            <button>Search</button>
+        </div>
+
+        <!-- Market Cards -->
+        <div class="market-cards">
+            <div class="market-card">
+                <div class="icon">₿</div>
+                <div class="name">BTCUSD</div>
+                <div class="change">+3.79%</div>
+            </div>
+            <div class="market-card">
+                <div class="icon">📈</div>
+                <div class="name">TSLA</div>
+                <div class="change">+8.19%</div>
+            </div>
+            <div class="market-card">
+                <div class="icon">🍏</div>
+                <div class="name">AAPL</div>
+                <div class="change" style="color: #d9534f;">-0.23%</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
