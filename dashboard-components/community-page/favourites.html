@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites - StockInsider</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 240px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h1 {
+            margin-top: 0;
+            color: #1e88e5; /* Update 1 */
+            font-size: 24px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #555;
+            font-size: 16px;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+        .sidebar .active {
+            background-color: #e3f2fd; /* Update 2 */
+            color: #1e88e5; /* Update 2 */
+            font-weight: bold;
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .hamburger {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+        }
+        .empty-state {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .empty-state-content {
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .heart-icon {
+            font-size: 48px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .empty-state h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .empty-state p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .add-button {
+            background-color: #1e88e5; /* Update 3 */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .add-button:hover {
+            background-color: #1976d2; /* Update 3 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>StockInsider</h1>
+            <ul>
+                <li><a href="http://127.0.0.1:8050/">Home</a></li>
+                <li><a href="#" class="active">Favourites</a></li>
+                <li><a href="http://127.0.0.1:3000/community.html">Community</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <button class="hamburger">☰</button>
+            </div>
+            <div class="empty-state">
+                <div class="empty-state-content">
+                    <div class="heart-icon">♡</div>
+                    <h2>No favourites yet</h2>
+                    <p>Looks like you haven't added any favourites. Add favourites now to track your preferred stocks.</p>
+                    <button class="add-button">Add Favourites</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

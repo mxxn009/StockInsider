@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - StockInsider</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        /* Left Sidebar */
+        .sidebar {
+            width: 240px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h1 {
+            color: #1e88e5;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-nav li {
+            margin-bottom: 15px;
+        }
+        .sidebar-nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+        }
+        .sidebar-nav a:hover {
+            background-color: #f0f0f0;
+        }
+        .sidebar-nav .active {
+            background-color: #e3f2fd;
+            color: #1e88e5;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #777;
+            font-size: 14px;
+            margin: 30px 0 15px;
+        }
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #ffffff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .hamburger {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+        }
+        .post {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .post-title {
+            font-size: 20px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .post-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .post-metrics {
+            display: flex;
+            gap: 20px;
+        }
+        .metric {
+            display: flex;
+            align-items: center;
+            color: #777;
+            font-size: 14px;
+        }
+        .metric span {
+            margin-left: 5px;
+        }
+        /* Right Sidebar */
+        .right-sidebar {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-left: 1px solid #e0e0e0;
+        }
+        .right-sidebar h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .recent-posts {
+            list-style: none;
+            padding: 0;
+        }
+        .recent-posts li {
+            margin-bottom: 15px;
+        }
+        .recent-posts a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .recent-posts a:hover {
+            color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h1>StockInsider</h1>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="http://127.0.0.1:8050/">Home</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">All</a></li>
+                </ul>
+                <h2 class="section-title">Custom Communities</h2>
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="active">Create a custom community</a></li>
+                </ul>
+                <h2 class="section-title">Recent</h2>
+                <ul class="sidebar-nav">
+                    <li><a href="#">/NSE-Enthusiasts</a></li>
+                    <li><a href="#">/StockInsiders</a></li>
+                    <li><a href="#">/NIFTY-index</a></li>
+                    <li><a href="#">/GlobalStocks</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <button class="hamburger">☰</button>
+            </div>
+            <div class="post">
+                <h2 class="post-title">Can Nifty climb above 23,800, Bank Nifty make another attempt to hit 10 DEMA?</h2>
+                <p class="post-description">The Nifty 50 almost moved closer to 23,800, which is likely to be crucial for an upward rally towards 24,000-24,500...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 12.1k</div>
+                    <div class="metric">💬 131</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+            <div class="post">
+                <h2 class="post-title">Greatest bubble in human history about to burst? USA's $34 trillion debt to trigger a recession, stocks may lose over half their value in a sell-off, says Mark Spitznagel</h2>
+                <p class="post-description">Mark Spitznagel, who is a bearish investor, has now predicted that stock prices may soon lose nearly half their value...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 32.8k</div>
+                    <div class="metric">💬 331</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+            <div class="post">
+                <h2 class="post-title">Adani Group stocks plunge up to 20% after Gautam Adani's indictment in US on bribery and fraud charges; Rs 2.25 lakh crore m-cap wiped out!</h2>
+                <p class="post-description">Adani Group companies' share prices plummeted up to 20% after Gautam Adani's indictment in the US on bribery and fraud charges...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 9.6k</div>
+                    <div class="metric">💬 81</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+            <div class="post">
+                <h2 class="post-title">Election outcome, MSCI rejig among 8 factors to likely impact stock markets this week</h2>
+                <p class="post-description">Nifty closed Friday with a 1.6% weekly gain, boosted by strong bank and IT stocks. On Friday, it ended at 23,907.25, up by 2.39%...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 4.3k</div>
+                    <div class="metric">💬 11</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+            <div class="post">
+                <h2 class="post-title">Week Ahead: Assembly poll results, F&O expiry, Q2 GDP, FII outflow, global cues among key market triggers</h2>
+                <p class="post-description">Assembly election results, Q2 GDP data, F&O expiry, foreign fund flow, and global cues will market dictate...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 17.5k</div>
+                    <div class="metric">💬 134</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2 class="post-title">Nifty, Sensex Close At Five-Month Lows Tracking Weak Global...</h2>
+                <p class="post-description">Intraday, both Nifty and Sensex fell around 1% to hit their lowest since June 10 and...</p>
+                <div class="post-metrics">
+                    <div class="metric">👍 18.9k</div>
+                    <div class="metric">💬 116</div>
+                    <div class="metric">↗️ Share</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <h2>Recent Posts</h2>
+            <ul class="recent-posts">
+                <li>
+                    <a href="https://www.moneycontrol.com/news/business/markets/bse-nse-clarify-that-there-is-no-reduction-in-number-of-securities-eligible-for-margin-trading-facility-12872694.html" target="_blank">/NSE-Enthusiasts - BSE, NSE clarify...</a>
+                </li>
+                <li>
+                    <a href="https://upstox.com/news/market-news/stocks/indian-hotels-fortis-healthcare-hit-52-week-high-despite-market-fall-here-s-why/article-129766/" target="_blank">/StockInsiders - Fortis Healthcare hit 52-week high...</a>
+                </li>
+                <li>
+                    <a href="https://www.ndtvprofit.com/markets/stock-market-live-gift-nifty-trades-below-23600-tata-power-bajaj-auto-mm-jsw-steel-in-focus" target="_blank">/NIFTY-index - NIFTY below 23,400, Sensex down...</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
