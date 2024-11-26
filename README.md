@@ -40,23 +40,6 @@ StockInsider is a web-based platform that combines Flask and Dash to deliver a s
 
 ---
 
-## Project Structure
-
-```
-StockInsider/
-├── app.py                # Main Flask application
-├── app1.py               # Flask app with integrated Dash application
-├── templates/
-│   ├── intro.html        # Home page template
-│   ├── login.html        # Login/signup template
-│   ├── dashboard.html    # Placeholder for Dash integration
-├── static/
-│   ├── styles.css        # Optional custom styles
-├── README.md             # Project documentation
-```
-
----
-
 ## Prerequisites
 
 Before running the application, ensure the following dependencies are installed:
